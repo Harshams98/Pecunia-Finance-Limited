@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "11b45a76-adb0-48e6-8d3b-c9c1f59f3105",
+		"name": "banking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22391281"
+	},
+	"item": [
+		{
+			"name": " http://localhost:9001/account/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"addresslanOne\": \"dfghj7890\",\r\n    \"addresslanTwo\": \"dfghjk\",\r\n    \"contact\": 1234567899,\r\n    \"aadhar\": 123456789110,\r\n    \"pan\": \"HWPW3931L\",\r\n    \"gender\": \"male\",\r\n    \"customerName\": \"fghjk\",\r\n    \"amount\":1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/account/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"account",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " http://localhost:9002/debitcheque",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"accountnumber\":{\r\n       \"acccountid\": 159035388145\r\n       }\r\n       ,\r\n        \"amount\":100,\r\n       \"issuedate\":\"2022-07-09\",\r\n       \"ifsc\":\"4d6g8h6de9\",\r\n       \"chequenumber\":881919\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9002/debitcheque",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"debitcheque"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9005/passbook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"accountId\": {  \"acccountid\": 159035388145},\r\n    \"startdate\": \"2022-07-29\",\r\n    \"endingdate\": \"2022-08-29\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9005/passbook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"passbook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8001/account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"addresslanOne\": \"dfghj7890\",\r\n    \"addresslanTwo\": \"dfghjk\",\r\n    \"contact\": 1234567899,\r\n    \"aadhar\": 123456789110,\r\n    \"pan\": \"123456789\",\r\n    \"gender\": \"male\",\r\n    \"customerName\": \"fghjk\",\r\n    \"amount\":1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8001/loan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"account\":{ \"accountid\": 539380586629},\r\n\r\n         \"amount\": 1000,\r\n    \"creditscore\": 900,\r\n    \"roi\": 5,\r\n    \"tenure\": 28,\r\n    \"loanid\":170000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/loan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8001/loandisbursal/170000",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"approved\",\r\n         \"amount\": 100000,\r\n    \"creditscore\": 900,\r\n    \"roi\": 5,\r\n    \"tenure\": 28,\r\n     \"loanid\":170000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/loandisbursal/170000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"loandisbursal",
+						"170000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
