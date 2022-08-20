@@ -1,0 +1,11 @@
+
+server:
+  port: 9002
+
+spring:
+  application:
+    name: Debit-Cheque-Management
+
+eureka:
+  instance:
+    hostname: localhost
